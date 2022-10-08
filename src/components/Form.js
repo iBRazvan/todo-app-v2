@@ -8,18 +8,17 @@ function Form({ inputText, setInputText, setTodos, todos, setStatus }) {
 
   const handleSubmitTodo = (e) => {
     e.preventDefault();
-    // eslint-disable-next-line no-lone-blocks
-    {
-      inputText.length > 0 &&
-        setTodos([
-          ...todos,
-          {
-            id: Math.random() * 1000,
-            text: inputText,
-            completed: false,
-          },
-        ]);
-    }
+
+    inputText.length > 0 &&
+      setTodos([
+        ...todos,
+        {
+          id: Math.random() * 1000,
+          text: inputText,
+          completed: false,
+        },
+      ]);
+
     setInputText("");
   };
 
